@@ -41,7 +41,7 @@ public class ActiveFigure {
             if(point.getY() + coord.getY() + y < 0){
                 continue;
             }
-            if(!square.getColorSquares(point.getX() + coord.getX() + x, point.getY() + coord.getY() + y).equals(Const.backgroundColor)){
+            if(!square.getColorSquares(point.getX() + coord.getX() + x, point.getY() + coord.getY() + y).equals(Const.BACKGROUND_COLOR)){
                 return false;
             }
         }

@@ -11,26 +11,27 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 
-public class WindowUser extends JFrame implements Runnable, GetColorSquares {
-    private final Squares[][] squares;
+public class WindowUser extends JFrame implements GetColorSquares {
+    private static final Squares[][] squares = new Squares[Const.WIDTH][Const.HEiGHT];;
+    private static final SquaresNextFigure[][] squaresNextFigure = new SquaresNextFigure[Const.WIDTH_NEXT_FIGURE][Const.HEIGHT_NEXT_FIGURE];;
     private ActiveFigure activeFigure;
+    private static ActiveFigure nextFigure;
+    private static boolean bool = true;
 
 
     public WindowUser() {
-        squares = new Squares[Const.WIDTH][Const.HEiGHT];
+        creationWindow();
+        creationSquares();
+        creationPanelWithNextFigure();
+        add(new Paint());
+        repaint();
         addKeyListener(new keyAdapter1());
         Timer timer = new Timer(500, new TimeAdapter());
         timer.start();
     }
 
-    @Override
-    public void run() {
-        creationWindow();
-        creationSquares();
-    }
-
     private void creationWindow() {
-        setSize(Const.WIDTH * Const.SIZE + 200, Const.HEiGHT * Const.SIZE + 35);
+        setSize(Const.WIDTH * Const.SIZE + 500, Const.HEiGHT * Const.SIZE + 35);
         setTitle("Tetris");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -48,14 +49,73 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
         }
     }
 
+    private void creationPanelWithNextFigure() {
+        for (int x = 0; x < Const.WIDTH_NEXT_FIGURE; x++) {
+            for (int y = 0; y < Const.HEIGHT_NEXT_FIGURE; y++) {
+                squaresNextFigure[x][y] = new SquaresNextFigure(x, y);
+                add(squaresNextFigure[x][y]);
+                squaresNextFigure[x][y].setVisible(true);
+            }
+        }
+    }
+
     @Override
     public Color getColorSquares(int x, int y) {
         return squares[x][y].getBackground();
     }
 
     public void addFigure() {
-        activeFigure = new ActiveFigure(this);
-        showFigure();
+        if (bool) {
+            activeFigure = new ActiveFigure(this);
+            nextFigure = new ActiveFigure(this);
+            showFigure();
+            showNextFigure();
+            bool = false;
+            return;
+        }
+            activeFigure = nextFigure;
+            nextFigure = new ActiveFigure(this);
+            showFigure();
+            showNextFigure();
+    }
+
+    private void showNextFigure() {
+        int x, y;
+        for (Coord point : nextFigure.getActiveFigure().points) {
+            x = point.getX() + 1;
+            y = point.getY() + 1;
+            /*if (x < 0 || x >= Const.WIDTH_NEXT_FIGURE) {
+                continue;
+            }
+            if (y < 0 || y >= Const.HEIGHT_NEXT_FIGURE) {
+                continue;
+            }*/
+
+            //
+            if (squaresNextFigure[x][y] == null) {
+                return;
+            }
+
+            // without if nullPointerException
+            squaresNextFigure[x][y].setBackground(nextFigure.getActiveFigure().getColor());
+            //
+        }
+    }
+
+    private void hideNextFigure() {
+        int x, y;
+        for (Coord point : nextFigure.getActiveFigure().points) {
+            x = point.getX() + 1;
+            y = point.getY() + 1;
+            /*if (x < 0 || x >= Const.WIDTH_NEXT_FIGURE) {
+                continue;
+            }
+            if (y < 0 || y >= Const.HEIGHT_NEXT_FIGURE) {
+                continue;
+            }*/
+            squaresNextFigure[x][y].setBackground(Const.BACKGROUND_COLOR);
+        }
+
     }
 
     private void showFigure() {
@@ -72,7 +132,7 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
 
 
             //
-            if(squares[x][y] == null){
+            if (squares[x][y] == null) {
                 return;
             }
 
@@ -93,7 +153,7 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
             if (y < 0 || y >= Const.HEiGHT) {
                 continue;
             }
-            squares[x][y].setBackground(Const.backgroundColor);
+            squares[x][y].setBackground(Const.BACKGROUND_COLOR);
         }
 
     }
@@ -106,7 +166,7 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
 
     private boolean isFullLine(int y) {
         for (int x = 0; x < Const.WIDTH; x++) {
-            if (squares[x][y].getBackground().equals(Const.backgroundColor)) {
+            if (squares[x][y].getBackground().equals(Const.BACKGROUND_COLOR)) {
                 return false;
             }
         }
@@ -115,15 +175,16 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
 
     private void hideLine(int y) {
         for (int x = 0; x < Const.WIDTH; x++) {
-            squares[x][y].setBackground(Const.backgroundColor);
+            squares[x][y].setBackground(Const.BACKGROUND_COLOR);
         }
     }
-    private void moveFiguresDown(int Y){
+
+    private void moveFiguresDown(int Y) {
         for (int y = Y; y > 0; y--) {
             for (int x = 0; x < Const.WIDTH; x++) {
-                if(!squares[x][y].getBackground().equals(Const.backgroundColor)){
+                if (!squares[x][y].getBackground().equals(Const.BACKGROUND_COLOR)) {
                     squares[x][y + 1].setBackground(squares[x][y].getBackground());
-                    squares[x][y].setBackground(Const.backgroundColor);
+                    squares[x][y].setBackground(Const.BACKGROUND_COLOR);
                 }
             }
         }
@@ -144,8 +205,10 @@ public class WindowUser extends JFrame implements Runnable, GetColorSquares {
         public void actionPerformed(ActionEvent e) {
             moveHideShow(0, 1);
             if (activeFigure.isStatic()) {
-                removeTheLine();
+                hideNextFigure();
                 addFigure();
+                removeTheLine();
+
             }
         }
     }

@@ -4,26 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173e1f69-1a57-4851-92fb-4302e6d6c626" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tetris1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LogicFigures/ActiveFigure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LogicFigures/Coord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LogicFigures/Figures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tetris.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/Const.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/GetColorSquares.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/Squares.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" afterDir="false" />
+    <list default="true" id="173e1f69-1a57-4851-92fb-4302e6d6c626" name="Changes" comment="2">
+      <change afterPath="$PROJECT_DIR$/src/interfaceUser/Paint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaceUser/SquaresNextFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicFigures/ActiveFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicFigures/ActiveFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Squares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/Tetris1/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Tetris1/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\Tetris1\src" />
@@ -63,6 +64,48 @@
       <option name="presentableId" value="Default" />
       <updated>1693777131515</updated>
     </task>
+    <task id="LOCAL-00001" summary="2">
+      <created>1693777686809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693777686809</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2">
+      <created>1693777737767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693777737767</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2">
+      <created>1693777781468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693777781468</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/interfaceUser/WindowUser.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tetris.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
