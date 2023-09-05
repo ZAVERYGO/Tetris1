@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="173e1f69-1a57-4851-92fb-4302e6d6c626" name="Changes" comment="2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/NumberOfLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/NumberOfLines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693937323937</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2">
+      <created>1693937838930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693937838930</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -105,7 +116,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/interfaceUser/WindowUser.java</url>
-          <line>73</line>
+          <line>72</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

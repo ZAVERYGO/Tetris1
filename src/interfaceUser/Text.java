@@ -13,6 +13,7 @@ public class Text extends JComponent {
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setFont(font);
         graphics2D.drawString("next figure", 450,  20);
+        graphics2D.drawString("number of lines: ", 400, 300);
     }
 
 }

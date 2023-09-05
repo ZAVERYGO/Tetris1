@@ -29,11 +29,10 @@ public class WindowUser extends JFrame implements GetColorSquares {
         creationWindow();
         creationSquares();
         creationPanelWithNextFigure();
-        add(new Text());
-        add(new NumberOfLines());
         repaint();
+        add(new Text());
         setVisible(true);
-        //setLayout(null);
+        add(new NumberOfLines());
         addKeyListener(new keyAdapter1());
         Timer timer = new Timer(500, new TimeAdapter());
         timer.start();
@@ -222,7 +221,6 @@ public class WindowUser extends JFrame implements GetColorSquares {
             moveHideShow(0, 1);
             if (activeFigure.isStatic()) {
                 gameOver();
-                add(new Text());
                 hideNextFigure();
                 addFigure();
                 removeTheLine();
