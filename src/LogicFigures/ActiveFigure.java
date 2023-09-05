@@ -23,7 +23,7 @@ public class ActiveFigure {
 
     public ActiveFigure(GetColorSquares square) {
         activeFigure = Figures.randomFigure();
-        coord = new Coord(Const.WIDTH / 2, activeFigure.topPoint.getY() - activeFigure.botPoint.getY() - 1);
+        coord = new Coord(Const.WIDTH / 2 - 1, activeFigure.topPoint.getY() - activeFigure.botPoint.getY() - 1);
         this.square = square;
     }
 

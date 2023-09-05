@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="173e1f69-1a57-4851-92fb-4302e6d6c626" name="Changes" comment="2">
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/Paint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaceUser/SquaresNextFigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaceUser/NumberOfLines.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LogicFigures/ActiveFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicFigures/ActiveFigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tetris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaceUser/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaceUser/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/Squares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaceUser/SquaresNextFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/SquaresNextFigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaceUser/WindowUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +41,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Tetris1/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/Tetris1/src"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\Tetris1\src" />
@@ -97,12 +99,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/interfaceUser/WindowUser.java</url>
-          <line>68</line>
+          <line>73</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Tetris.java</url>
-          <line>9</line>
+          <line>5</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

@@ -1,13 +1,11 @@
-import interfaceUser.Paint;
+import interfaceUser.Text;
 import interfaceUser.WindowUser;
-
-import javax.swing.*;
-
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Tetris {
     public static void main(String[] args) {
         WindowUser windowUser = new WindowUser();
+        windowUser.add(new Text());
+
         windowUser.addFigure();
         /*JFrame jFrame = new JFrame();
         jFrame.setSize(300, 300);

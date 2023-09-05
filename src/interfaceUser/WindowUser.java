@@ -12,19 +12,28 @@ import java.awt.event.KeyEvent;
 
 
 public class WindowUser extends JFrame implements GetColorSquares {
-    private static final Squares[][] squares = new Squares[Const.WIDTH][Const.HEiGHT];;
-    private static final SquaresNextFigure[][] squaresNextFigure = new SquaresNextFigure[Const.WIDTH_NEXT_FIGURE][Const.HEIGHT_NEXT_FIGURE];;
+    private static final Squares[][] squares = new Squares[Const.WIDTH][Const.HEiGHT];
+    ;
+    private static final SquaresNextFigure[][] squaresNextFigure = new SquaresNextFigure[Const.WIDTH_NEXT_FIGURE][Const.HEIGHT_NEXT_FIGURE];
+    ;
     private ActiveFigure activeFigure;
     private static ActiveFigure nextFigure;
     private static boolean bool = true;
+    private static int numberOfLines = 0;
 
+    public static int getNumberOfLines() {
+        return numberOfLines;
+    }
 
     public WindowUser() {
         creationWindow();
         creationSquares();
         creationPanelWithNextFigure();
-        add(new Paint());
+        add(new Text());
+        add(new NumberOfLines());
         repaint();
+        setVisible(true);
+        //setLayout(null);
         addKeyListener(new keyAdapter1());
         Timer timer = new Timer(500, new TimeAdapter());
         timer.start();
@@ -35,8 +44,6 @@ public class WindowUser extends JFrame implements GetColorSquares {
         setTitle("Tetris");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(null);
-        setVisible(true);
     }
 
     private void creationSquares() {
@@ -44,7 +51,6 @@ public class WindowUser extends JFrame implements GetColorSquares {
             for (int y = 0; y < Const.HEiGHT; y++) {
                 squares[x][y] = new Squares(x, y);
                 add(squares[x][y]);
-                squares[x][y].setVisible(true);
             }
         }
     }
@@ -54,7 +60,6 @@ public class WindowUser extends JFrame implements GetColorSquares {
             for (int y = 0; y < Const.HEIGHT_NEXT_FIGURE; y++) {
                 squaresNextFigure[x][y] = new SquaresNextFigure(x, y);
                 add(squaresNextFigure[x][y]);
-                squaresNextFigure[x][y].setVisible(true);
             }
         }
     }
@@ -73,10 +78,10 @@ public class WindowUser extends JFrame implements GetColorSquares {
             bool = false;
             return;
         }
-            activeFigure = nextFigure;
-            nextFigure = new ActiveFigure(this);
-            showFigure();
-            showNextFigure();
+        activeFigure = nextFigure;
+        nextFigure = new ActiveFigure(this);
+        showFigure();
+        showNextFigure();
     }
 
     private void showNextFigure() {
@@ -195,6 +200,17 @@ public class WindowUser extends JFrame implements GetColorSquares {
             if (isFullLine(y)) {
                 hideLine(y);
                 moveFiguresDown(y);
+                numberOfLines++;
+                add(new NumberOfLines());
+                setVisible(true);
+            }
+        }
+    }
+
+    private void gameOver() {
+        for (int x = 0; x < Const.WIDTH; x++) {
+            if (!squares[x][0].getBackground().equals(Const.BACKGROUND_COLOR)) {
+                dispose();
             }
         }
     }
@@ -205,6 +221,8 @@ public class WindowUser extends JFrame implements GetColorSquares {
         public void actionPerformed(ActionEvent e) {
             moveHideShow(0, 1);
             if (activeFigure.isStatic()) {
+                gameOver();
+                add(new Text());
                 hideNextFigure();
                 addFigure();
                 removeTheLine();
